@@ -1,0 +1,6 @@
+framework module Pods_examenPraxis {
+  umbrella header "Pods-examenPraxis-umbrella.h"
+
+  export *
+  module * { export * }
+}

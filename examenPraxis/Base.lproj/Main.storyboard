@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="examenPraxis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9an-sz-Ezh">
+                                <rect key="frame" x="0.0" y="94" width="414" height="767"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w91-Q5-PJ0" customClass="CustomSegmentedControl" customModule="examenPraxis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wtn-Vn-66y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparateButtonTitles" value="VIEW1,VIEW2,VIEW3,VIEW4,VIEW5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeViewAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xGw-tb-R2Q"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w91-Q5-PJ0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6tU-7G-hwh"/>
+                            <constraint firstItem="9an-sz-Ezh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JO6-zh-3yP"/>
+                            <constraint firstItem="9an-sz-Ezh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ldy-tL-pJX"/>
+                            <constraint firstItem="9an-sz-Ezh" firstAttribute="top" secondItem="w91-Q5-PJ0" secondAttribute="bottom" id="Sll-GG-Ofh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9an-sz-Ezh" secondAttribute="bottom" constant="1" id="Zoi-GF-QHW"/>
+                            <constraint firstItem="w91-Q5-PJ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dHR-CE-D0c"/>
+                            <constraint firstItem="w91-Q5-PJ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zdj-HH-Pp4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTableView" destination="9an-sz-Ezh" id="VLP-3Y-glu"/>
+                        <outlet property="segment" destination="w91-Q5-PJ0" id="Py7-x1-CZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
